@@ -5,17 +5,22 @@ import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Login from './View/Controller/Login';
+import CadastroProduto from './View/CRUD/CadastroProduto';
+import Vendas from './View/Controller/Vendas';
+import Relatorio from './View/Controller/Relatorio';
+import ClsBancoDados from './ClsBancoDados';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+const clsDB: ClsBancoDados = new ClsBancoDados();
+
 const router = createBrowserRouter([
-  
   {
     path:"/",
     element:<Login></Login>
   },
-  /*
+  
   {
     path:"cadastroproduto",
     element:<CadastroProduto clsDB={clsDB}></CadastroProduto>
@@ -28,7 +33,7 @@ const router = createBrowserRouter([
     path:"relatorio",
     element:<Relatorio clsDB={clsDB}></Relatorio>
   },
- */
+ 
 ])
 
 root.render(
