@@ -219,7 +219,7 @@ export default function Vendas({ clsDB }: { clsDB: ClsBancoDados }) {
 
 
       <Condicional condicao={statusFormulario}>
-        <Box>
+        <Box sx={{margin:'5%'}}>
           <TextField
             sx={{ marginTop: "20px" }}
             id="outlined-basic"
@@ -253,7 +253,7 @@ export default function Vendas({ clsDB }: { clsDB: ClsBancoDados }) {
 
           </div>
           <Box >
-            <Box sx={{ width: "90%" }}>
+            <Box sx={{ width: "100%" }}>
               <Typography color={"blue"}> Produtos </Typography>
               <hr></hr>
             </Box>
@@ -261,7 +261,7 @@ export default function Vendas({ clsDB }: { clsDB: ClsBancoDados }) {
               // <ListItem  key={e.id}>
               //  <ListItemText primary={e.nome + "  Qt:"+e.valor} />
               //</ListItem>
-              <Box sx={{ width: "90%" }}>
+              <Box sx={{ width: "100%" }}>
                 <Typography>{e.descricao}</Typography>
                 <Typography>{"Quantidade: " + e.quantidadePedido}</Typography>
                 <hr></hr>

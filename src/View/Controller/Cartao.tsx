@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Card, Typography, styled } from '@mui/material';
+import { Box, Card, Typography, styled } from '@mui/material';
 import Button from '@mui/material/Button';
 import CardContent from '@mui/material/CardContent';
 import TextField from '@mui/material/TextField';
@@ -59,27 +59,30 @@ export default function Cartao({clsDB,acaoBotaoAvancar}:props) {
       }, []);
 
       return (
-        <>       
-        <div>
-          {listaEstoque.map((product, index) => (
-            <StyledCard>
-            <CardContent>        
-              <Typography variant="h6">{product.descricao}</Typography>
-              <TextField
-                sx={{marginTop:"7px"}}
-                label="Quantidade"
-                variant="outlined"
-                type="number"
-                value={product.quantidadePedido}
-                onChange={(e)=>acaoAlteraQuantidade(index, Number(e.target.value))}
-              />
-            </CardContent>
-          </StyledCard>
-          ))}
-        </div>
-        <Button sx={{ width: '80%', marginLeft: '10%', marginTop: '2%' }} variant="contained"
-         onClick={avancar}>Avançar</Button>
-       
+        <> 
+      <Box sx={{marginLeft:'3%', width:'90%'}}>                  
+              <div>
+                {listaEstoque.map((product, index) => (
+                                
+                  <StyledCard sx={{width:'100%'}}>
+                  <CardContent>        
+                    <Typography variant="h6">{product.descricao}</Typography>
+                    <TextField
+                      sx={{marginTop:"7px", width:'100%'}}
+                      label="Quantidade"
+                      variant="outlined"
+                      type="number"
+                      value={product.quantidadePedido}
+                      onChange={(e)=>acaoAlteraQuantidade(index, Number(e.target.value))}
+                    />
+                  </CardContent>
+                </StyledCard>
+
+                ))}
+              </div>
+              <Button sx={{ width: '80%', marginLeft: '10%', marginTop: '2%' }} variant="contained"
+              onClick={avancar}>Avançar</Button>
+      </Box>  
         </>
       );
 }

@@ -98,7 +98,7 @@ export default function Relatorio({ clsDB }: { clsDB: ClsBancoDados }){
      onClickAdicionarEstoque={acaoChamaMenuEstoque}></MenuPadrao>
    
 <Box>
-<FormControl sx={{marginTop:'5px'}}>
+<FormControl sx={{margin:'5%'}}>
   <FormLabel id="demo-radio-buttons-group-label">Data de fechamento</FormLabel>
   <RadioGroup
     aria-labelledby="demo-radio-buttons-group-label"
@@ -112,14 +112,14 @@ export default function Relatorio({ clsDB }: { clsDB: ClsBancoDados }){
 </Box>
 
    <Box>
-     <Button  sx={{marginTop:'5px'}}
+     <Button  sx={{margin:'5%'}}
       variant="contained" 
        onClick={selecionaData}
         >Pesquisar
      </Button>
    </Box>
  <Condicional condicao ={statusFormulario}>
-  <Box sx={{marginTop:'10px'}}>
+  <Box sx={{margin:'5%'}}>
     <Typography fontWeight="bold">Total de pagamentos</Typography>
     <Typography fontWeight="bold">PIX:</Typography>
     <Typography>{pagamento?.pix}</Typography>

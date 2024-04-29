@@ -137,7 +137,7 @@ export default function CadastroProduto({ clsDB }: { clsDB: ClsBancoDados }) {
                 </Condicional>
 
                 <Condicional condicao={!statusFormulario}>
-                    <Box>
+                    <Box sx={{margin:'2%', width:'100%'}}>
                         <div>
                             <TextField
                                 id="filled-disabled"
@@ -147,8 +147,8 @@ export default function CadastroProduto({ clsDB }: { clsDB: ClsBancoDados }) {
                                 }}
                                 type="number"
                                 disabled={true}
-                                sx={{ marginTop: "20px" }}
-                                value={estoque?.id}
+                                sx={{ marginTop: "5px", width:"50%" }}
+                                value={estoque?.id}                                
                                 onChange={(e) => setEstoque({ ...estoque, id: Number(e.target.value) })}
                             />
                         </div>
@@ -157,7 +157,7 @@ export default function CadastroProduto({ clsDB }: { clsDB: ClsBancoDados }) {
                             <TextField
                                 id="outlined-basic"
                                 label="Descrição"
-                                sx={{ marginTop: "20px" }}
+                                sx={{ marginTop: "20px" ,width:"80%" }}
                                 InputLabelProps={{
                                     shrink: true,
                                 }}
@@ -171,7 +171,7 @@ export default function CadastroProduto({ clsDB }: { clsDB: ClsBancoDados }) {
                                 id="outlined-basic"
                                 label="Quantidade em Estoque"
                                 type="number"
-                                sx={{ marginTop: "20px" }}
+                                sx={{ marginTop: "20px", width:"50%" }}
                                 InputLabelProps={{
                                     shrink: true,
                                 }}
@@ -184,7 +184,7 @@ export default function CadastroProduto({ clsDB }: { clsDB: ClsBancoDados }) {
                                 id="outlined-basic"
                                 label="Valor unitario"
                                 type="number"
-                                sx={{ marginTop: "20px" }}
+                                sx={{ marginTop: "20px", width:"50%" }}
                                 InputLabelProps={{
                                     shrink: true,
                                 }}
